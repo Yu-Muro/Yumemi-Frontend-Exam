@@ -1,0 +1,28 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-console": "off", // console.logのエラーをOFF
+    "vue/no-v-html": "off", // v-htmlのエラーをOFF
+    "vue/require-default-prop": "off", // propsのデフォルトをOFF(definePropsの影響)
+    "no-unused-vars": "off", // propsの変数がテンプレートで使われているとエラーになるのでOFF
+    "vue/no-mutating-props": "off", // propsのデータが変更される可能性がある時に出るエラーをOFF
+    "vue/multi-word-component-names": "off" // コンポーネント名の複数語をOFF
+  }
+}
